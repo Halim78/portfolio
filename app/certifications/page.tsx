@@ -7,7 +7,7 @@ import { Card } from "../components/card";
 const certificationsOrganisms = [
 	{
         image: "/wcs.png",
-		label: "Formation dévelopeur Web",
+		label: "Formation développeur Web",
 		handle: "WildCodeSchool",
 	},
 	{
