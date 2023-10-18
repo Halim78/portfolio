@@ -3,8 +3,9 @@ import React from "react";
 import Particles from "./components/particles";
 
 const navigation = [
-	{ name: "Projects", href: "/projects" },
+	{ name: "Projets", href: "/projects" },
 	{ name: "Contact", href: "/contact" },
+	{ name: "Certifications", href: "/certifications" }
 ];
 
 export default function Home() {
@@ -29,32 +30,24 @@ export default function Home() {
 				quantity={100}
 			/>
 			<h1 className="z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
-				chronark
+				Développeur FullStack
 			</h1>
+			<div className="my-5 text-center animate-fade-in">
+				<h2 className="text-sm text-zinc-500 mx-6">
+					<strong style={{ color: "white" }}>
+						<span style={{ marginRight: '18px' }}>React.js</span>
+						|
+						<span style={{ marginLeft: '18px', marginRight: '18px' }}>Vue.js</span>
+    					|
+						<span style={{ marginLeft: '18px' }}>Node.js</span>
+					</strong>
+				</h2>
+			</div>
 
 			<div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 			<div className="my-16 text-center animate-fade-in">
 				<h2 className="text-sm text-zinc-500 mx-6">
-					Hi, my name is Andreas, I'm building serverless and open source
-					solutions at{" "}
-					<Link
-						target="_blank"
-						href="https://upstash.com"
-						className="underline duration-500 hover:text-zinc-300"
-					>
-						Upstash
-					</Link>
-
-					
-					<wbr /> and working on{" "}
-					<Link
-						target="_blank"
-						href="https://unkey.dev"
-						className="underline duration-500 hover:text-zinc-300"
-					>
-						unkey.dev
-					</Link>{" "}
-					at night.
+					Bonjour, je suis <strong style={{ color: "white" }}>Halim</strong>, <strong style={{ color: "white" }}>Développeur Web & Mobile</strong> depuis 2018 ...
 				</h2>
 			</div>
 		</div>
