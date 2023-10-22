@@ -2,13 +2,14 @@
 import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
-// import { color } from "framer-motion";
+import { useState } from "react";
+import Drawer from "../components/drawer";
 
 const certificationsOrganisms = [
 	{
-        image: "/wcs.png",
-		label: "Formation développeur Web",
-		handle: "WildCodeSchool",
+        image: "/cyberini.png",
+		label: "Formation sécurité web",
+		handle: "Cyberini",
 	},
 	{
         image: "/ocr.png",
@@ -27,11 +28,86 @@ const certificationsOrganisms = [
 	},
 ];
 
+
+const wildCodeSchoolCertification = [
+	"/wcs.png",
+];
+
+const udemyCertifications = [
+	"/certifications/udemy/kali.png",
+	"/certifications/udemy/certification_docker.png",
+	"/certifications/udemy/hacking_zscurity.jpg",
+];
+
+const thmCertifications = [
+	"/certifications/thm/THM-intro_cyber.png",
+	"/certifications/thm/THM-YQ7VRRDUNK.png",
+];
+
+const openClassRoomCertification = [
+	"/certifications/ocr/apprendre_apprendre.png",
+	"/certifications/ocr/fullstack_node.png",
+	"/certifications/ocr/git_github.png",
+	"/certifications/ocr/html_css.png",
+	"/certifications/ocr/javascript.png",
+	"/certifications/ocr/linux.png",
+	"/certifications/ocr/mysql.png",
+	"/certifications/ocr/sql.png",
+	"/certifications/ocr/terminal.png",
+	"/certifications/ocr/ux_design.png",
+	"/certifications/ocr/ux_pratique.png",
+	"/certifications/ocr/tcp_ip.png",
+	"/certifications/ocr/system_info.png",
+	"/certifications/ocr/univers_cyber.png",
+	"/certifications/ocr/pentest.png",
+	"/certifications/ocr/chef_SI.png",
+];
+
+const cyberiniCertification = [
+	"/certifications/cyberini/certification_tosa.png",
+];
+
+
 export default function Example() {
+	const [isOpen, setIsOpen] = useState(false);
+
+	const [currentCertifications, setCurrentCertifications] = useState<string[]>([]);
+
+	const openCloseDrawer=(val: boolean,  organismHandle: string)=>{
+		const newStatus = (prevVal: boolean) => !prevVal;
+		setIsOpen(newStatus);
+
+		switch (organismHandle) {
+			case "WildCodeSchool":
+				setCurrentCertifications(wildCodeSchoolCertification);
+				break;
+			case "OpenClassrooms":
+				setCurrentCertifications(openClassRoomCertification);
+				break;
+			case "Udemy":
+				setCurrentCertifications(udemyCertifications);
+				break;
+			case "TryHackMe":
+				setCurrentCertifications(thmCertifications);
+				break;
+			case "Cyberini":
+				setCurrentCertifications(cyberiniCertification);
+				break;
+			default:
+				setCurrentCertifications([]);
+		}
+	}
+
+	const closeDrawerFromEveryWhere = () => {
+		if (isOpen === true){
+			setIsOpen(false);
+		}
+	}
+
 	return (
-        <div className="relative pb-16">
+        <div onClick={() => closeDrawerFromEveryWhere()} className="relative pb-16">
 			<Navigation />
-			<div className="px-6 pt-20 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
+			<div  className="px-6 pt-20 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
 				<div className="max-w-2xl mx-auto lg:mx-0">
 					<h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">
                     Certifications
@@ -41,13 +117,13 @@ export default function Example() {
 					</p>
 				</div>
 				<div className="w-full h-px bg-zinc-800" />
+
                 <div className="grid w-full grid-cols-1 gap-4 mx-auto mt-16 sm:mt-0 sm:grid-cols-4 lg:gap-8">
-					{certificationsOrganisms.map((s) => (
-						<Card>
+					{certificationsOrganisms.map((s,index) => (
+						<Card key={index} >
 							<Link
-								// href={s.href}
                                 href={""}
-								target="_blank"
+								onClick={() => openCloseDrawer(true,  s.handle)}
 								className="p-4 relative flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24  lg:pb-48  md:p-16"
 							>
 								<span
@@ -70,6 +146,12 @@ export default function Example() {
 					))}
 				</div>
 			</div>
+			<Drawer
+				isOpen={isOpen}
+				onClose={() => setIsOpen(false)}
+				image="/path/to/image.jpg"
+				certifications={currentCertifications}
+			/>
 		</div>
 	);
 }

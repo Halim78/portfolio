@@ -126,7 +126,9 @@ export default async function ProjectsPage() {
 			<div className="max-w-2xl mx-auto lg:mx-0">
 				<h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">Projets</h2>
 			  	<p className="mt-4 text-zinc-400">
-					Les projets présentés ci-dessous ont été réalisés par mon entreprise, et j'ai personnellement contribué à leur développement. Je vous fournirai des détails tels que les technologies utilisées, s'ils sont orientés front-end ou back-end, ainsi qu'une description de mon implication directe.
+				  	J'ai activement participé au développement des projets que vous trouverez ci-dessous au cours de ces dernières années. 
+					Je suis heureux de partager avec vous des détails sur les technologies utilisées, leur orientation (front-end ou back-end), ainsi que sur la nature précise de mon implication.<br/>
+					J'espère que cela vous donnera une meilleure idée de mes compétences et de ma passion pour le développement.
 				</p>
 			</div>
 			<div className="w-full h-px bg-zinc-800" />
