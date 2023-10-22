@@ -116,8 +116,35 @@ export default function Example() {
                     Voici les certificats obtenues pendant ma carrière et sur mon temps personnel.
 					</p>
 				</div>
-				<div className="w-full h-px bg-zinc-800" />
+				{/* <div className="w-full h-px bg-zinc-800" /> */}
+				<Card >
+					<span
+						className="absolute w-px h-2/3 bg-gradient-to-b from-zinc-500 via-zinc-500/50 to-transparent"
+						aria-hidden="true"
+					/>
+					<div style={{display: "flex", justifyContent: "space-around"}}>
+						<span className="relative z-10 flex  ml-10 mt-3 items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200 drop-shadow-orange">
+							<img 
+								src="/wcs.png" 
+								alt="" 
+								style={{
+									height: "50px", 
+									width: "50px",
+								}}
+							/>
+						</span>{" "}
+						<div className="z-10 flex flex-col items-center">
+							<span className="lg:text-xl pt-2 font-medium duration-150 xl:text-3xl text-zinc-200 group-hover:text-white font-display">
+								WildCodeSchool
+							</span>
+							<span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
+								Certifié avoir suivi la formation de Développeur Web spécialité Javascript sur une durée de 9 mois avec 4 mois de stage.
+							</span>
+						</div>
+						<div></div>
 
+					</div>
+				</Card>
                 <div className="grid w-full grid-cols-1 gap-4 mx-auto mt-16 sm:mt-0 sm:grid-cols-4 lg:gap-8">
 					{certificationsOrganisms.map((s,index) => (
 						<Card key={index} >

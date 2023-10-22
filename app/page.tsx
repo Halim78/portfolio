@@ -39,7 +39,10 @@ export default function Home() {
 						|
 						<span style={{ marginLeft: '18px', marginRight: '18px' }}>Vue.js</span>
     					|
-						<span style={{ marginLeft: '18px' }}>Node.js</span>
+						<span style={{ marginLeft: '18px', marginRight: '18px' }}>Node.js</span>
+						|
+						<span style={{ marginLeft: '18px' }}>Flluter</span>
+
 					</strong>
 				</h2>
 			</div>
