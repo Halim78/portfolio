@@ -1,50 +1,9 @@
 import "../global.css";
 import { Inter } from "@next/font/google";
 import LocalFont from "@next/font/local";
-import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
 
-export const metadata: Metadata = {
-	title: {
-		default: "halim-aktas.com",
-		template: "%s | halim-aktas.com",
-	},
-	description: "Software engineer at upstash.com and founder of planetfall.io",
-	openGraph: {
-		title: "halim-aktas.com",
-		description:
-			"Software engineer at upstash.com and founder of planetfall.io",
-		url: "https://halim-aktas.com",
-		siteName: "halim-aktas.com",
-		images: [
-			{
-				url: "https://halim-aktas.com/og.png",
-				width: 1920,
-				height: 1080,
-			},
-		],
-		locale: "en-US",
-		type: "website",
-	},
-	robots: {
-		index: true,
-		follow: true,
-		googleBot: {
-			index: true,
-			follow: true,
-			"max-video-preview": -1,
-			"max-image-preview": "large",
-			"max-snippet": -1,
-		},
-	},
-	twitter: {
-		title: "halim-aktas",
-		card: "summary_large_image",
-	},
-	icons: {
-		shortcut: "/favicon.jpg",
-	},
-};
+
 const inter = Inter({
 	subsets: ["latin"],
 	variable: "--font-inter",
@@ -63,6 +22,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
 			<head>
+				<link rel="icon" href="/images/favicon.jpg" type="image/x-icon" />
 				<Analytics />
 			</head>
 			<body

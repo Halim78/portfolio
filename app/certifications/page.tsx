@@ -7,24 +7,24 @@ import Drawer from "../components/drawer";
 
 const certificationsOrganisms = [
 	{
-        image: "/cyberini.png",
-		label: "Formation sécurité web",
-		handle: "Cyberini",
-	},
-	{
-        image: "/ocr.png",
+        image: "images/ocr.png",
 		label: "Site de formation en ligne",
 		handle: "OpenClassrooms",
 	},
     {
-        image: "/udemy.png",
+        image: "images/udemy.png",
 		label: "Site de formation en ligne",
 		handle: "Udemy",
 	},
 	{
-        image: "/thm.png",
+        image: "images/thm.png",
 		label: "Plateforme d'apprrentissage de la cybersécurité",
 		handle: "TryHackMe",
+	},
+	{
+        image: "images/cyberini.png",
+		label: "Formation sécurité web",
+		handle: "Cyberini",
 	},
 ];
 
@@ -34,37 +34,37 @@ const wildCodeSchoolCertification = [
 ];
 
 const udemyCertifications = [
-	"/certifications/udemy/kali.png",
-	"/certifications/udemy/certification_docker.png",
-	"/certifications/udemy/hacking_zscurity.jpg",
+	"images/certifications/udemy/certification_docker.png",
+	"images/certifications/udemy/kali.png",
+	"images/certifications/udemy/hacking_zscurity.jpg",
 ];
 
 const thmCertifications = [
-	"/certifications/thm/THM-intro_cyber.png",
-	"/certifications/thm/THM-YQ7VRRDUNK.png",
+	"images/certifications/thm/THM-intro_cyber.png",
+	"images/certifications/thm/THM-YQ7VRRDUNK.png",
 ];
 
 const openClassRoomCertification = [
-	"/certifications/ocr/apprendre_apprendre.png",
-	"/certifications/ocr/fullstack_node.png",
-	"/certifications/ocr/git_github.png",
-	"/certifications/ocr/html_css.png",
-	"/certifications/ocr/javascript.png",
-	"/certifications/ocr/linux.png",
-	"/certifications/ocr/mysql.png",
-	"/certifications/ocr/sql.png",
-	"/certifications/ocr/terminal.png",
-	"/certifications/ocr/ux_design.png",
-	"/certifications/ocr/ux_pratique.png",
-	"/certifications/ocr/tcp_ip.png",
-	"/certifications/ocr/system_info.png",
-	"/certifications/ocr/univers_cyber.png",
-	"/certifications/ocr/pentest.png",
-	"/certifications/ocr/chef_SI.png",
+	"images/certifications/ocr/apprendre_apprendre.png",
+	"images/certifications/ocr/fullstack_node.png",
+	"images/certifications/ocr/git_github.png",
+	"images/certifications/ocr/html_css.png",
+	"images/certifications/ocr/javascript.png",
+	"images/certifications/ocr/linux.png",
+	"images/certifications/ocr/mysql.png",
+	"images/certifications/ocr/sql.png",
+	"images/certifications/ocr/terminal.png",
+	"images/certifications/ocr/ux_design.png",
+	"images/certifications/ocr/ux_pratique.png",
+	"images/certifications/ocr/tcp_ip.png",
+	"images/certifications/ocr/system_info.png",
+	"images/certifications/ocr/univers_cyber.png",
+	"images/certifications/ocr/pentest.png",
+	"images/certifications/ocr/chef_SI.png",
 ];
 
 const cyberiniCertification = [
-	"/certifications/cyberini/certification_tosa.png",
+	"images/certifications/cyberini/certification_tosa.png",
 ];
 
 
@@ -125,7 +125,7 @@ export default function Example() {
 					<div style={{display: "flex", justifyContent: "space-around"}}>
 						<span className="relative z-10 flex  ml-10 mt-3 items-center justify-center w-12 h-12 text-sm duration-1000 border rounded-full text-zinc-200 group-hover:text-white group-hover:bg-zinc-900 border-zinc-500 bg-zinc-900 group-hover:border-zinc-200 drop-shadow-orange">
 							<img 
-								src="/wcs.png" 
+								src="images/wcs.png" 
 								alt="" 
 								style={{
 									height: "50px", 
@@ -135,7 +135,7 @@ export default function Example() {
 						</span>{" "}
 						<div className="z-10 flex flex-col items-center">
 							<span className="lg:text-xl pt-2 font-medium duration-150 xl:text-3xl text-zinc-200 group-hover:text-white font-display">
-								WildCodeSchool
+								Wild Code School
 							</span>
 							<span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
 								Certifié avoir suivi la formation de Développeur Web spécialité Javascript sur une durée de 9 mois avec 4 mois de stage.

@@ -1,5 +1,4 @@
 import type { Project } from "@/.contentlayer/generated";
-import Link from "next/link";
 import React from "react";
 
 type Props = {
@@ -20,7 +19,7 @@ export const TagButton: React.FC<TagButtonProps> = ({ title }) => {
         color: '#c7b7b7',
         textAlign: 'center',
         cursor: 'default',
-		border: '1px solid #393838',
+		border: title === "Front" ? '2px solid #0081AB' : '2px solid #7F4192' 
     };
 
     return <div style={styles}>{title}</div>;
@@ -28,9 +27,9 @@ export const TagButton: React.FC<TagButtonProps> = ({ title }) => {
 
 export const Article: React.FC<Props> = ({ project, tags }) => {
 	return (
-		<Link href={`/projects/${project.slug}`}>
+		<div>
 			<article className="p-4 md:p-8">
-				<div className="flex justify-between gap-2 items-center">
+				<div className="flex justify-between gap-2 items-center ">
 					<span className="text-xs duration-1000 text-zinc-200 group-hover:text-white group-hover:border-zinc-200 drop-shadow-orange">
 						{project.date}
 					</span>
@@ -44,7 +43,7 @@ export const Article: React.FC<Props> = ({ project, tags }) => {
 					<p className="pt-2">{project.title}</p>
 					<img 
 						className="ml-2" 
-						src={`/technos/${project.title}.png`} 
+						src={`images/projets/${project.title}.png`} 
 						alt="" 
 						width="50" 
 						height="50" 
@@ -66,6 +65,7 @@ export const Article: React.FC<Props> = ({ project, tags }) => {
 						})}
 					</div>
 			</article>
-		</Link>
+
+		</div>
 	);
 };

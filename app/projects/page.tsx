@@ -1,18 +1,16 @@
-import Link from "next/link";
+// import Link from "next/link";
 import React from "react";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import { Article, TagButton } from "./article";
 
-export const revalidate = 60;
 
 const data = [
 	{
 		slug: "unkey",
-		image: "path/image.png",
 		title: "TPBP",
 		tags: ["Front"],
-		technos: ["/technos/vue.png", "/technos/php.png", "/technos/mysql.png", "/technos/kanbane.png", "/technos/git.png", "/technos/github.png",  "/technos/gitlab.png", "/technos/cypress.png", "/technos/storybook.png"],
+		technos: ["images/technos/vue.png", "images/technos/php.png", "images/technos/mysql.png", "images/technos/kanbane.png", "images/technos/git.png", "images/technos/github.png",  "images/technos/gitlab.png", "images/technos/cypress.png", "images/technos/storybook.png"],
 		date: "Janvier - Juillet 2022",
 		description: `CRM | Participation à la refonte du front d'un logiciel de gestion de client 
 		d'une grande banque Française. Sprint review hebdomadaire, daily meetings, et peer review. 
@@ -21,10 +19,9 @@ const data = [
 	},
 	{
 		slug: "unkey1",
-		image: "path/image.png",
 		title: "PRIMONIAL",
 		tags: ["Front", "Back"],
-		technos: ["/technos/angular.png", "/technos/php.png", "/technos/mysql.png", "/technos/kanbane.png", "/technos/jira.png", "/technos/git.png", "/technos/github.png"],
+		technos: ["images/technos/angular.png", "images/technos/php.png", "images/technos/mysql.png", "images/technos/kanbane.png", "images/technos/jira.png", "images/technos/git.png", "images/technos/github.png"],
 		date: "Janvier - Juillet 2022",
 		description: `Participation à la conception du socle technique pour une application
 		bancaire. Intégration front en Ionic, réalisation de graphiques avec Chart.js
@@ -32,10 +29,9 @@ const data = [
 	},
 	{
 		slug: "unkey2",
-		image: "path/image.png",
 		title: "TWOCHECK",
 		tags: ["Front", "Back"],
-		technos: ["/technos/vue.png", "/technos/php.png", "/technos/kanbane.png", "/technos/mysql.png", "/technos/jira.png", "/technos/git.png", "/technos/github.png"],
+		technos: ["images/technos/vue.png", "images/technos/php.png", "images/technos/kanbane.png", "images/technos/mysql.png", "images/technos/jira.png", "images/technos/git.png", "images/technos/github.png"],
 		date: "Janvier - Juillet 2022",
 		description: `CRM | Participation à l'évolution d'un logiciel de courtier pour la gestion de
 		projet du devis à la signature. Intégration et restructuration du front et
@@ -44,21 +40,31 @@ const data = [
 	},
 	{
 		slug: "unkey3",
-		image: "path/image.png",
 		title: "SCANN'APP",
 		tags: ["Front"],
-		technos: ["/technos/flutter.png", "/technos/firebase.png", "/technos/google_maps.png", "/technos/kanbane.png", "/technos/sqlite.png", "/technos/git.png", "/technos/github.png"],
+		technos: ["images/technos/flutter.png", "images/technos/firebase.png", "images/technos/google_maps.png", "images/technos/kanbane.png", "images/technos/sqlite.png", "images/technos/git.png", "images/technos/github.png"],
 		date: "Janvier - Juillet 2022",
 		description: `Conception d'une application mobile de scan pour l'automatisation de la
 		logistique. Création et intégration du front et back. Scannage simple ou multiple à l'affilé, création de
 		fichier csv répertoriant tous les éléments scannés et envoi par mail.`
 	},
+	// {
+	// 	slug: "planetfall66",
+	// 	title: "SCRAPJOB",
+	// 	tags: ["Front", "Back"],
+	// 	technos: ["images/technos/react.png", "images/technos/next.png", "images/technos/node.png", "images/technos/kanbane.png", "images/technos/mongoDB.png", "images/technos/git.png", "images/technos/github.png"],
+	// 	date: "Janvier - Juillet 2022",
+	// 	description: `Conception et création from scratch d'un logiciel conçu pour centraliser la recherche d'emplois dans le secteur tech. En parcourant plusieurs sites proposant des offres d'emploi, 
+	// 	notre application collecte et rassemble toutes les annonces en un seul et unique endroit. L'idée m'est venue de ma propre expérience : j'ai passé des heures à naviguer, 
+	// 	filtrer et rechercher sur différents sites lors de ma quête d'un nouvel emploi. 
+	// 	Avec SCRAPJOB, fini la perte de temps et la nécessité de jongler entre plusieurs applications. 
+	// 	On peut désormais simplifier la recherche d'emploi.`
+	// },
 	{
 		slug: "planetfall",
-		image: "path/image.png",
 		title: "MMA",
 		tags: ["Front", "Back"],
-		technos: ["/technos/react.png", "/technos/node.png", "/technos/firebase.png", "/technos/kanbane.png", "/technos/google_maps.png", "/technos/git.png", "/technos/github.png", "/technos/flutter.png", "/technos/sqlite.png" ],
+		technos: ["images/technos/react.png", "images/technos/node.png", "images/technos/firebase.png", "images/technos/kanbane.png", "images/technos/google_maps.png", "images/technos/git.png", "images/technos/github.png", "images/technos/flutter.png", "images/technos/sqlite.png" ],
 		date: "Janvier - Juillet 2022",
 		description: `CRM | Développement intégral, front-end et back-end, d'une plateforme pour une agence de mannequins. 
 		Mise en place de fonctionnalités avancées pour la gestion des profils des mannequins dans la section back-office. 
@@ -69,20 +75,18 @@ const data = [
 	},
 	{
 		slug: "planetfall1",
-		image: "path/image.png",
 		title: "CLOUDPACK",
 		tags: ["Front", "Back"],
-		technos: ["/technos/react.png", "/technos/node.png", "/technos/kanbane.png", "/technos/mysql.png", "/technos/typescript.png", "/technos/git.png", "/technos/github.png"],
+		technos: ["images/technos/react.png", "images/technos/node.png", "images/technos/kanbane.png", "images/technos/mysql.png", "images/technos/typescript.png", "images/technos/git.png", "images/technos/github.png"],
 		date: "Janvier - Juillet 2022",
 		description: `SAAS | Création d'un outil de suivi de projet et de gestion des employés.
 		Conception du front et back from scratch`,
 	},
 	{
 		slug: "planetfall2",
-		image: "path/image.png",
 		title: "ONSSA",
 		tags: ["Front", "Back"],
-		technos: ["/technos/flutter.png", "/technos/firebase.png", "/technos/sqlite.png",  "/technos/kanbane.png", "/technos/google_maps.png", "/technos/git.png", "/technos/github.png"],
+		technos: ["images/technos/flutter.png", "images/technos/firebase.png", "images/technos/sqlite.png",  "images/technos/kanbane.png", "images/technos/google_maps.png", "images/technos/git.png", "images/technos/github.png"],
 		date: "Janvier - Juillet 2022",
 		description: `Conception d'une application mobile agroalimentaire pour un organisme
 		d'état à l'étranger. Permet la remonté d'information avec localisation et
@@ -90,10 +94,9 @@ const data = [
 	},
 	{
 		slug: "planetfall33",
-		image: "path/image.png",
 		title: "ITRADE999",
 		tags: ["Front", "Back"],
-		technos: ["/technos/react.png", "/technos/node.png", "/technos/material-ui.png",  "/technos/kanbane.png", "/technos/mysql.png", "/technos/git.png", "/technos/github.png"],
+		technos: ["images/technos/react.png", "images/technos/node.png", "images/technos/material-ui.png",  "images/technos/kanbane.png", "images/technos/mysql.png", "images/technos/git.png", "images/technos/github.png"],
 		date: "Janvier - Juillet 2022",
 		description: `Conception intégrale d'une application de crypto-monnaie. Création d'un
 		site web comprenant un suivi en temps réel des cours du marché, ainsi
@@ -101,11 +104,20 @@ const data = [
 		`,
 	},
 	{
-		slug: "planetfall4s",
-		image: "path/image.png",
+		slug: "planetfall4",
 		title: "COLIS-TRACK",
 		tags: ["Front", "Back"],
-		technos: ["/technos/javascript.png", "/technos/jquery.png", "/technos/bootstrap.png", "/technos/mysql.png", "/technos/google_maps.png", "/technos/git.png", "/technos/github.png"],
+		technos: ["images/technos/javascript.png", "images/technos/jquery.png", "images/technos/bootstrap.png", "images/technos/mysql.png", "images/technos/google_maps.png", "images/technos/git.png", "images/technos/github.png"],
+		date: "Janvier - Juillet 2022",
+		description: `Application innovante de suivi de colis, permettant une visualisation en temps réel des envois internationaux sur un globe interactif. 
+		Selon le mode de transport - avion ou bateau - un icône approprié trace le parcours du colis. 
+		Construite avec les puissantes API Google Maps et Flight, cette plateforme assure précision et réactivité. `
+	},
+	{
+		slug: "planetfall5",
+		title: "PORTFOLIO",
+		tags: ["Front"],
+		technos: ["images/technos/react.png", "images/technos/next.png", "images/technos/tailwind.png", "images/technos/typescript.png", "images/technos/git.png", "images/technos/github.png"],
 		date: "Janvier - Juillet 2022",
 		description: `Application innovante de suivi de colis, permettant une visualisation en temps réel des envois internationaux sur un globe interactif. 
 		Selon le mode de transport - avion ou bateau - un icône approprié trace le parcours du colis. 
@@ -135,7 +147,8 @@ export default async function ProjectsPage() {
 	
 			<div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 ">
 			  <Card>
-				<Link href={`/projects/${featured.slug}`}>
+				{/* <Link href={`/projects/${featured.slug}`}> */}
+				<div>
 				  <article className="relative w-full h-full p-4 md:p-8">
 					<div className="flex items-center justify-between gap-2">
 					  <div className="text-xs text-zinc-100">
@@ -153,7 +166,7 @@ export default async function ProjectsPage() {
 					  	{featured.title}
 					  	<img 
 							className="mx-2 pl-2" 
-							src="/technos/lcl.png" 
+							src="images/projets/lcl.png" 
 							alt="" 
 							width="45" 
 							height="35" 
@@ -164,17 +177,17 @@ export default async function ProjectsPage() {
 					<div className="mt-2 mb-2 display flex flex-wrap wrap">
 						{featured.technos.map((techno, index) => {
 							return <img 
-										className="mx-1" 
-										key={index} 
-										src={techno} 
-										alt="" 
-										width="35" 
-										height="35" 
-									/>;
+								className="mx-1" 
+								key={index} 
+								src={techno} 
+								alt="" 
+								width="35" 
+								height="35" 
+							/>;
 						})}
 					</div>
 				  </article>
-				</Link>
+				</div>
 			  </Card>
 	
 			  <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">

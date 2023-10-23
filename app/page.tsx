@@ -29,7 +29,13 @@ export default function Home() {
 				className="absolute inset-0 -z-10 animate-fade-in"
 				quantity={100}
 			/>
-			<h1 className="z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
+			<h1  style={{
+				backgroundImage: "linear-gradient(to right, white, #0081AB, #7F4192, white)",
+				WebkitBackgroundClip: "text",
+				backgroundClip: "text",
+				color: "transparent"
+        	}}
+			className="z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
 				Développeur FullStack
 			</h1>
 			<div className="my-5 text-center animate-fade-in">
@@ -41,7 +47,7 @@ export default function Home() {
     					|
 						<span style={{ marginLeft: '18px', marginRight: '18px' }}>Node.js</span>
 						|
-						<span style={{ marginLeft: '18px' }}>Flluter</span>
+						<span style={{ marginLeft: '18px' }}>Flutter</span>
 
 					</strong>
 				</h2>
@@ -50,7 +56,7 @@ export default function Home() {
 			<div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 			<div className="my-16 text-center animate-fade-in">
 				<h2 className="text-sm text-zinc-500 mx-6">
-					Bonjour, je suis <strong style={{ color: "white" }}>Halim</strong>, <strong style={{ color: "white" }}>Développeur Web & Mobile</strong> depuis 2018 ...
+					<strong style={{ color: "" }}>Halim Aktas</strong>, <strong style={{ color: "white" }}>Développeur depuis 2018 ...</strong>
 				</h2>
 			</div>
 		</div>
