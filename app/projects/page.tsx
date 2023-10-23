@@ -4,6 +4,41 @@ import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import { Article, TagButton } from "./article";
 
+const TPBPDescription = 
+	(<div>
+		<p><b>CRM |</b></p> 
+		<p>Participation à la refonte d'un logiciel de gestion de client d'une grande banque Française. Au sein d'une équipe chez SEAROCCO, nous collaborions étroitement en suivant une méthodologie Agile, marquée par des sprint reviews hebdomadaires, des daily meetings et des sessions régulières de peer review.</p><br />
+		<p>L'équipe chez SEAROCCO était composée de 4 développeurs front-end, y compris moi-même. Du côté du client, nous avions la chance de travailler avec 3 développeurs back-end et un Product Owner dédié.</p><br />
+		<p><b>Mes principales contributions comprenaient:</b></p>
+		<ul style={{listStyleType: "circle"}}>
+			<li>Développement de nouvelles fonctionnalités pour enrichir l'expérience utilisateur.</li>
+			<li>Intégration de données en utilisant des APIs REST pour récupérer et afficher des informations en temps réel depuis le back-end.</li>
+			<li>Optimisation de l'interface pour assurer une expérience utilisateur fluide sur tous les appareils grâce à la mise en œuvre de techniques responsive.</li>
+			<li>Débogage et résolution de problèmes sur diverses pages pour garantir la stabilité et la fiabilité de l'application.</li>
+			<li><b>Tests</b> <br/>
+			J'ai employé Cypress pour la réalisation de tests end-to-end et Storybook pour visualiser et tester les composants individuellement.</li>
+		</ul>
+	</div>);
+
+
+const MMADescription = 
+	(<div>
+		<p><b>CRM |</b></p> 
+		<p>Conception et développement complet d'une plateforme dédiée à une agence de mannequins, couplée à une application mobile</p><br />
+		<p>L'équipe chez SEAROCCO était composée de 4 développeurs front-end y compris moi-même et 2 développeurs back-end, en plus du tech lead.</p><br /><br />
+		<p><b>Mes principales contributions comprenaient:</b></p><br />
+			<b>Back-office</b> <br/>Contribution active à la mise en œuvre de fonctionnalités sophistiquées pour la gestion des profils de mannequins. Cela englobe la création d'utilisateurs, le suivi des abonnements, ainsi que la gestion et le suivi des castings.<br /><br />
+			<b>Application mobile</b> <br/>J'ai piloté le développement d'une application orientée utilisateur offrant :
+				<ul style={{listStyleType: "circle", paddingLeft: "15px"}}>
+					<li>Une interface intuitive pour la gestion de compte.</li>
+					<li>Une plateforme de sélection et suivi de castings en temps réel.</li>
+					<li>Une fonction de parrainage via un lien privé pour promouvoir l'application.</li>
+					<li>Une intégration d'iframe dédiée à la section d'abonnement.</li>
+					<li>Une option de communication directe permettant aux utilisateurs d'échanger avec leurs interlocuteurs sans quitter l'application.</li><br />
+				</ul>
+			<b>Intégration</b> <br/>Les données relatives aux castings ont été harmonieusement intégrées via une API WordPress.
+	</div>);
+
 
 const data = [
 	{
@@ -12,10 +47,7 @@ const data = [
 		tags: ["Front"],
 		technos: ["images/technos/vue.png", "images/technos/php.png", "images/technos/mysql.png", "images/technos/kanbane.png", "images/technos/git.png", "images/technos/github.png",  "images/technos/gitlab.png", "images/technos/cypress.png", "images/technos/storybook.png"],
 		date: "Janvier - Juillet 2022",
-		description: `CRM | Participation à la refonte du front d'un logiciel de gestion de client 
-		d'une grande banque Française. Sprint review hebdomadaire, daily meetings, et peer review. 
-		Équipe mixte avec 4 développeurs chez SEAROCCO côté front (dont j'ai fait partie) et 
-		3 développeurs côté back et 1 Product Owner chez le client.`
+		description: TPBPDescription
 	},
 	{
 		slug: "unkey1",
@@ -66,12 +98,7 @@ const data = [
 		tags: ["Front", "Back"],
 		technos: ["images/technos/react.png", "images/technos/node.png", "images/technos/firebase.png", "images/technos/kanbane.png", "images/technos/google_maps.png", "images/technos/git.png", "images/technos/github.png", "images/technos/flutter.png", "images/technos/sqlite.png" ],
 		date: "Janvier - Juillet 2022",
-		description: `CRM | Développement intégral, front-end et back-end, d'une plateforme pour une agence de mannequins. 
-		Mise en place de fonctionnalités avancées pour la gestion des profils des mannequins dans la section back-office. 
-		Parallèlement, développement d'une application mobile axée sur l'utilisateur, 
-		offrant des fonctionnalités telles que la gestion de compte, la sélection de castings, 
-		et la possibilité d'échanger directement avec son interlocuteur via l'application.
-		Intégration de data depuis WORDPRESS `,
+		description: MMADescription,
 	},
 	{
 		slug: "planetfall1",
@@ -139,7 +166,7 @@ export default async function ProjectsPage() {
 				<h2 className="text-3xl font-bold tracking-tight text-zinc-100 sm:text-4xl">Projets</h2>
 			  	<p className="mt-4 text-zinc-400">
 				  	J'ai activement participé au développement des projets que vous trouverez ci-dessous au cours de ces dernières années. 
-					Je suis heureux de partager avec vous des détails sur les technologies utilisées, leur orientation (front-end ou back-end), ainsi que sur la nature précise de mon implication.<br/>
+					Je suis heureux de partager avec vous les détails sur les technologies utilisées, leur orientation (front-end ou back-end), ainsi que sur la nature précise de mon implication.<br/>
 					J'espère que cela vous donnera une meilleure idée de mes compétences et de ma passion pour le développement.
 				</p>
 			</div>
