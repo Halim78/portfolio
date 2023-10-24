@@ -1,5 +1,4 @@
 // import Link from "next/link";
-import React from "react";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import { Article, TagButton } from "./article";
@@ -20,24 +19,177 @@ const TPBPDescription =
 		</ul>
 	</div>);
 
-
 const MMADescription = 
 	(<div>
 		<p><b>CRM |</b></p> 
 		<p>Conception et développement complet d'une plateforme dédiée à une agence de mannequins, couplée à une application mobile</p><br />
 		<p>L'équipe chez SEAROCCO était composée de 4 développeurs front-end y compris moi-même et 2 développeurs back-end, en plus du tech lead.</p><br /><br />
-		<p><b>Mes principales contributions comprenaient:</b></p><br />
+		<p><b>Mes principales contributions comprenaient:</b></p>
 			<b>Back-office</b> <br/>Contribution active à la mise en œuvre de fonctionnalités sophistiquées pour la gestion des profils de mannequins. Cela englobe la création d'utilisateurs, le suivi des abonnements, ainsi que la gestion et le suivi des castings.<br /><br />
-			<b>Application mobile</b> <br/>J'ai piloté le développement d'une application orientée utilisateur offrant :
+			<b>Application mobile</b> <br/>J'ai piloté le développement front-end et back-end d'une application orientée utilisateur offrant :
 				<ul style={{listStyleType: "circle", paddingLeft: "15px"}}>
 					<li>Une interface intuitive pour la gestion de compte.</li>
 					<li>Une plateforme de sélection et suivi de castings en temps réel.</li>
 					<li>Une fonction de parrainage via un lien privé pour promouvoir l'application.</li>
 					<li>Une intégration d'iframe dédiée à la section d'abonnement.</li>
-					<li>Une option de communication directe permettant aux utilisateurs d'échanger avec leurs interlocuteurs sans quitter l'application.</li><br />
+					<li>Une option de communication directe permettant aux utilisateurs d'échanger avec leurs interlocuteurs sans quitter l'application.</li>
+					<li>Création des APIs nécessaires</li><br />
 				</ul>
 			<b>Intégration</b> <br/>Les données relatives aux castings ont été harmonieusement intégrées via une API WordPress.
 	</div>);
+
+const primonialDescription = 
+	(<div>
+		<p>Conception du socle technique d'une application bancaire destinée à la gestion de patrimoine</p><br />
+		<p>L'équipe chez SEAROCCO était composée de 2 développeurs front-end y compris moi-même et 2 développeurs back-end, 
+		en plus du product owner chez le client.</p>
+		<p>Cette application permet une gestion efficace des comptes et des établissements financiers.</p><br />
+		<p><b>Mes principales contributions:</b></p>
+			<p>J'ai intégré l'interface utilisateur en utilisant Ionic et développé des représentations graphiques avec Chart.js, 
+			offrant une analyse détaillée du patrimoine financier.<br /> 
+			Ces graphiques fournissent également une visualisation géographique des investissements. 
+			De plus, j'ai incorporé des APIs bancaires externes pour optimiser la gestion des portefeuilles financiers.</p>
+	</div>);
+
+const twoCheckDescription = 
+	(<div>
+		<p><b>CRM |</b></p> 
+		<p>Contribution à la modernisation d'un logiciel destiné aux courtiers</p><br />
+		<p>L'équipe chez SEAROCCO était composée de 2 développeurs front-end y compris moi-même et 1 développeurs back-end, en plus du tech lead.</p><br /><br />
+		<p>Ce logiciel couvrait l'ensemble du processus de gestion de projet, depuis la création du devis jusqu'à la signature finale</p><br />
+		<p><b>Mes responsabilités incluaient l'intégration et la restructuration tant du front-end que du back-end:</b></p><br />
+			<b>J'ai mis en œuvre des fonctionnalités telles que:</b> <br/>
+				<ul style={{listStyleType: "circle", paddingLeft: "15px"}}>
+					<li>La prise de rendez-vous via un calendrier affichant les disponibilités du conseiller et l'agence en question</li>
+					<li>Le téléchargement et la signature électronique de documents.</li>
+					<li>Le dépôt des documents sur la plateforme</li>
+					<li>Un suivi complet du dossier, offrant une traçabilité de chaque étape via une timeline évolutif</li>
+					<li>La visualisation des contrats en cours</li><br />
+				</ul>
+	</div>);
+
+const scannAppDescription = (
+	<div>
+		<p>Conception from scratch d'une application mobile dédiée à la digitalisation de la logistique par le biais du scan.</p><br />
+		<p>
+			J'ai pris en charge la création et l'intégration complète du design, front-end et du back-end. 
+		</p>
+		<p><br />
+		<b>L'application permet:</b>
+		<ul style={{listStyleType: "circle", paddingLeft: "15px"}}>
+			<li>Un scannage unitaire ou en série</li> 
+			<li>Générer automatiquement un fichier CSV listant tous les éléments scannés avec leurs dates respectives</li> 
+			<li>Récupérer la zone géographique via Google Maps API pour indiquer le centre de scan</li>
+			<li>La possibilité d'envoyer un récapitulatif par e-mail</li>
+		</ul>
+		</p><br />
+	</div>
+);
+
+const cloudpackDescription = (
+	<div>
+		<p><b>SAAS |</b></p> 
+		<p>Conception intégrale d'un logiciel de suivi de projet et de gestion des employés pour répondre à un besoin interne de l'entreprise.</p><br />
+		<p>
+			Ce projet a été mené en parallèle de mes missions principales, réalisé de manière autonome suite à un besoin ressenti au sein de l'entreprise.
+		</p>
+		<p><br />
+		<b>J'ai mis en œuvre des fonctionnalités telles que:</b> <br/>
+			<ul style={{listStyleType: "circle", paddingLeft: "15px"}}>
+				<li>Le portail de connexion sécurisé.</li>
+				<li>Fonctionnalité pour enregistrer le temps consacré à chaque projet.</li>
+				<li>Filtrage des projets avec une option "favoris".</li>
+				<li>Possibilité de personnaliser son profil employé.</li>
+				<li>Interface pour demander des jours de congés.</li>
+				<li>Représentation graphique permettant de visualiser les jours travaillés, le nombre total de projets, ainsi que les congés imputés</li>
+				<li>Mis en place des tests unitaires</li>
+				<li>Développement des APIs</li>
+				<br />
+			</ul>
+		</p><br />
+	</div>
+);
+
+const onssaDescription = (
+	<div>
+		<p>Développement d'une application mobile agroalimentaire pour un organisme d'état international.</p><br />
+		<p>
+			Cette application facilite la remontée d'informations cruciales telles que les inondations, fuites, coupures d'électricité, etc., 
+			en permettant aux utilisateurs de fournir des détails localisés accompagnés de photos.
+		</p>
+		<p><br />
+		<b> J'ai été responsable de la conception, de l'intégration ainsi que du développement front-end et back-end de cette solution.</b> <br/>
+			<ul style={{listStyleType: "circle", paddingLeft: "15px"}}>
+				<li>Sachant que certaines régions géographiques ciblées peuvent être isolées et sans connexion Internet, 
+					l'application a été conçue pour fonctionner hors-ligne. 
+					Elle stocke les données localement et, une fois connectée, synchronise les informations avec la base de données distante.
+				</li>
+				<li>Développement des APIs</li>
+				<br />
+			</ul>
+		</p><br />
+	</div>
+);
+
+const itrade999Description = (
+	<div>
+		<p>Développement intégral d'une application de crypto-monnaie.</p><br />
+		<p>
+			J'ai conçu de A à Z une plateforme web offrant un suivi en direct des cours du marché des crypto-monnaies, 
+			ainsi qu'une interface dédiée à la gestion des portefeuilles clients. 
+		</p>
+		<p><br />
+		<b>Outre la réalisation complète du design, j'ai développé les parties front-end et back-end de la plateforme.</b> <br/><br />
+		<b>J'ai mis en œuvre des fonctionnalités telles que:</b> <br/>
+			<ul style={{listStyleType: "circle", paddingLeft: "15px"}}>
+				<li>Un portail de connexion sécurisé </li>
+				<li>intégrant des API pour permettre aux utilisateurs d'accéder à leurs comptes crypto externes.</li>
+				<li>Mis en place des tests unitaires</li>
+				<li>Développement des APIs pour le back-end </li>
+				<br />
+			</ul>
+		</p><br />
+	</div>
+);
+
+
+const colisTrackDescription = (
+	<div>
+		<p>Développement d'une application de suivi de colis en temps réel.</p><br />
+		<p>
+			J'ai contribué à la création d'une solution innovante permettant de visualiser en direct les envois internationaux sur un globe interactif.
+			Selon le mode de transport, avion ou bateau, des icônes spécifiques illustrent le parcours du colis.
+		</p>
+		<p><br />
+		<b>Cette plateforme, élaborée grâce aux puissantes API Google Maps et Flight, garantit une précision remarquable.</b> <br/><br />
+		<b> Parmi mes réalisations majeures sur ce projet:</b> <br/>
+			<ul style={{listStyleType: "circle", paddingLeft: "15px"}}>
+				<li>Mise en place d'un suivi précis et direct des colis. </li>
+				<li>Visualisation des différents statuts pour chaque envoi.</li>
+				<li>Conception d'une base de données optimisée pour stocker les coordonnées géographiques récurrentes, réduisant ainsi les appels inutiles à l'API Google Maps.</li>
+				<br />
+			</ul>
+		</p><br />
+	</div>
+);
+
+
+const portfolioDescription = (
+	<div>
+		<p>Développement de mon Portfolio avec React, Next.js et Node.js.</p><br />
+		<p>
+			J'ai conçu mon site portfolio afin de mettre en avant mes expériences et les projets réalisés tout au long de ma carrière
+		</p><br />
+		<p>
+			Cette plateforme multi-pages offre un aperçu détaillé de mon parcours tout en proposant les informations nécessaires pour me contacter.<br />
+			J'ai personnellement acquis mon nom de domaine et pris en charge l'hébergement du site, assurant la liaison entre l'hébergeur et 
+			la plateforme d'achat du nom de domaine
+		</p> <br />
+		<p>	
+			Notablement, ce projet m'a permis d'expérimenter pour la première fois les technologies Next.js et Tailwind, enrichissant ainsi mon expertise technique.
+		</p>
+	</div>
+);
 
 
 const data = [
@@ -52,12 +204,10 @@ const data = [
 	{
 		slug: "unkey1",
 		title: "PRIMONIAL",
-		tags: ["Front", "Back"],
+		tags: ["Front"],
 		technos: ["images/technos/angular.png", "images/technos/php.png", "images/technos/mysql.png", "images/technos/kanbane.png", "images/technos/jira.png", "images/technos/git.png", "images/technos/github.png"],
 		date: "Janvier - Juillet 2022",
-		description: `Participation à la conception du socle technique pour une application
-		bancaire. Intégration front en Ionic, réalisation de graphiques avec Chart.js
-		& utilisation d'APIs pour la gestion de portefeuilles financiers.`,
+		description: primonialDescription
 	},
 	{
 		slug: "unkey2",
@@ -65,20 +215,15 @@ const data = [
 		tags: ["Front", "Back"],
 		technos: ["images/technos/vue.png", "images/technos/php.png", "images/technos/kanbane.png", "images/technos/mysql.png", "images/technos/jira.png", "images/technos/git.png", "images/technos/github.png"],
 		date: "Janvier - Juillet 2022",
-		description: `CRM | Participation à l'évolution d'un logiciel de courtier pour la gestion de
-		projet du devis à la signature. Intégration et restructuration du front et
-		back. Prise de RDV, téléchargement de document, signature et suivi dossier.
-		`,
+		description: twoCheckDescription
 	},
 	{
 		slug: "unkey3",
 		title: "SCANN'APP",
-		tags: ["Front"],
+		tags: ["Front", "Back"],
 		technos: ["images/technos/flutter.png", "images/technos/firebase.png", "images/technos/google_maps.png", "images/technos/kanbane.png", "images/technos/sqlite.png", "images/technos/git.png", "images/technos/github.png"],
 		date: "Janvier - Juillet 2022",
-		description: `Conception d'une application mobile de scan pour l'automatisation de la
-		logistique. Création et intégration du front et back. Scannage simple ou multiple à l'affilé, création de
-		fichier csv répertoriant tous les éléments scannés et envoi par mail.`
+		description: scannAppDescription
 	},
 	// {
 	// 	slug: "planetfall66",
@@ -104,10 +249,9 @@ const data = [
 		slug: "planetfall1",
 		title: "CLOUDPACK",
 		tags: ["Front", "Back"],
-		technos: ["images/technos/react.png", "images/technos/node.png", "images/technos/kanbane.png", "images/technos/mysql.png", "images/technos/typescript.png", "images/technos/git.png", "images/technos/github.png"],
+		technos: ["images/technos/react.png", "images/technos/node.png", "images/technos/jest.png", "images/technos/kanbane.png", "images/technos/mysql.png", "images/technos/typescript.png", "images/technos/git.png", "images/technos/github.png"],
 		date: "Janvier - Juillet 2022",
-		description: `SAAS | Création d'un outil de suivi de projet et de gestion des employés.
-		Conception du front et back from scratch`,
+		description: cloudpackDescription,
 	},
 	{
 		slug: "planetfall2",
@@ -115,20 +259,15 @@ const data = [
 		tags: ["Front", "Back"],
 		technos: ["images/technos/flutter.png", "images/technos/firebase.png", "images/technos/sqlite.png",  "images/technos/kanbane.png", "images/technos/google_maps.png", "images/technos/git.png", "images/technos/github.png"],
 		date: "Janvier - Juillet 2022",
-		description: `Conception d'une application mobile agroalimentaire pour un organisme
-		d'état à l'étranger. Permet la remonté d'information avec localisation et
-		images. Création et intégration du front et back.`,
+		description: onssaDescription,
 	},
 	{
 		slug: "planetfall33",
 		title: "ITRADE999",
 		tags: ["Front", "Back"],
-		technos: ["images/technos/react.png", "images/technos/node.png", "images/technos/material-ui.png",  "images/technos/kanbane.png", "images/technos/mysql.png", "images/technos/git.png", "images/technos/github.png"],
+		technos: ["images/technos/react.png", "images/technos/node.png", "images/technos/material-ui.png", "images/technos/jest.png",  "images/technos/kanbane.png", "images/technos/mysql.png", "images/technos/git.png", "images/technos/github.png"],
 		date: "Janvier - Juillet 2022",
-		description: `Conception intégrale d'une application de crypto-monnaie. Création d'un
-		site web comprenant un suivi en temps réel des cours du marché, ainsi
-		qu'une section dédiée à la gestion des portefeuilles clients.
-		`,
+		description: itrade999Description
 	},
 	{
 		slug: "planetfall4",
@@ -136,9 +275,7 @@ const data = [
 		tags: ["Front", "Back"],
 		technos: ["images/technos/javascript.png", "images/technos/jquery.png", "images/technos/bootstrap.png", "images/technos/mysql.png", "images/technos/google_maps.png", "images/technos/git.png", "images/technos/github.png"],
 		date: "Janvier - Juillet 2022",
-		description: `Application innovante de suivi de colis, permettant une visualisation en temps réel des envois internationaux sur un globe interactif. 
-		Selon le mode de transport - avion ou bateau - un icône approprié trace le parcours du colis. 
-		Construite avec les puissantes API Google Maps et Flight, cette plateforme assure précision et réactivité. `
+		description: colisTrackDescription
 	},
 	{
 		slug: "planetfall5",
@@ -146,11 +283,11 @@ const data = [
 		tags: ["Front"],
 		technos: ["images/technos/react.png", "images/technos/next.png", "images/technos/tailwind.png", "images/technos/typescript.png", "images/technos/git.png", "images/technos/github.png"],
 		date: "Janvier - Juillet 2022",
-		description: `Application innovante de suivi de colis, permettant une visualisation en temps réel des envois internationaux sur un globe interactif. 
-		Selon le mode de transport - avion ou bateau - un icône approprié trace le parcours du colis. 
-		Construite avec les puissantes API Google Maps et Flight, cette plateforme assure précision et réactivité. `
+		description: portfolioDescription
 	},
   ];
+  
+
 export default async function ProjectsPage() {
 	const featured = data.find((project) => project.slug === "unkey")!;
 	const top2 = data.find((project) => project.slug === "planetfall")!;
