@@ -41,28 +41,37 @@ export const Article: React.FC<Props> = ({ project, tags }) => {
 				</div>
 				<h2 className="display flex mt-7 z-20 text-xl font-medium duration-1000 lg:text-3xl text-zinc-200 group-hover:text-white font-display">
 					<p className="pt-2">{project.title}</p>
-					<img 
-						className="ml-2" 
-						src={`images/projets/${project.title}.png`} 
-						alt="" 
-						width="50" 
-						height="50" 
-					/>
+					{project.title !== "Next Projet" ?
+						<img 
+							className="ml-2" 
+							src={`images/projets/${project.title}.png`} 
+							alt="" 
+							width="50" 
+							height="50" 
+						/> : ""
+					}
 				</h2>
 				<p className="z-20 mt-4 mb-8 text-sm  duration-1000 text-zinc-400 group-hover:text-zinc-200">
+
 					{project.description}
 				</p>
 				<div className="mt-2 mb-2 display flex flex-wrap wrap">
-						{project.technos.map((techno: string, index: number) => {
-							return <img 
-										className="mx-1 pt-1" 
-										key={index} 
-										src={techno} 
-										alt="" 
-										width="35" 
-										height="35" 
-									/>;
-						})}
+				{project.title !== "Next Projet" ?
+						project.technos.map((techno: string, index: number) => {
+								return <img 
+									className="mx-1 pt-1" 
+									key={index} 
+									src={techno} 
+									alt="" 
+									width="35" 
+									height="35" 
+								/>
+						}) : <img 
+						className="ml-2" 
+						src="images/progress.png" 
+						alt="" 
+						width="150" 
+					/>}
 					</div>
 			</article>
 
