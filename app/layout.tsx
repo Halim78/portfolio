@@ -25,11 +25,7 @@ export default function RootLayout({
 				<link rel="icon" href="/images/favicon.jpg" type="image/x-icon" />
 				<Analytics />
 			</head>
-			<body
-				className={`bg-black ${
-					process.env.NODE_ENV === "development" ? "debug-screens" : undefined
-				}`}
-			>
+			<body className="bg-black" >
 				{children}
 			</body>
 		</html>

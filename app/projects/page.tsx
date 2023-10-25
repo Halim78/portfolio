@@ -8,19 +8,36 @@ import React, { useState } from 'react';
 const TPBPDescription = () => {
 	const [isExpanded, setIsExpanded] = useState(false);
 
+	// if(typeof window !== 'undefined'){
+	// 	console.log("UNDEFINED WINDOW");
+	// }else {
+	// 	console.log("IN WINDOW !!!!!!");
+	// }
+
 	return (
 		<div>
-			<p><b>CRM |</b></p> 
-			<p>Participation à la refonte d'un logiciel de gestion de client d'une grande banque Française. Au sein d'une équipe chez SEAROCCO, nous collaborions étroitement en suivant une méthodologie Agile, marquée par des sprint reviews hebdomadaires, des daily meetings et des sessions régulières de peer review.</p><br />
-			<p>L'équipe chez SEAROCCO était composée de 4 développeurs front-end, y compris moi-même. Du côté du client, nous avions la chance de travailler avec 3 développeurs back-end et un Product Owner dédié.</p><br />
+			<p>
+				<b>CRM |</b>
+			</p> 
+			<p>
+				Participation à la refonte d'un logiciel de gestion de client d'une grande banque Française. Au sein d'une équipe chez SEAROCCO, 
+				nous collaborions étroitement en suivant une méthodologie Agile, marquée par des sprint reviews hebdomadaires, 
+				des daily meetings et des sessions régulières de peer review.
+			</p><br />
+			<p>
+				L'équipe chez SEAROCCO était composée de 4 développeurs front-end, y compris moi-même. 
+				Du côté du client, nous avions la chance de travailler avec 3 développeurs back-end et un Product Owner dédié.
+			</p><br />
 			<p  style={{color: "#0081AB", cursor: "pointer", textAlign: "end", fontWeight: "bold" }}
 				onClick={() => setIsExpanded(!isExpanded)}
 			>
 				{isExpanded ? 'Lire moins' : 'Lire plus ...'}
-			</p>
+			</p><br />
 			{isExpanded && (
 				<div>
-					<p><b>Mes principales contributions comprenaient:</b></p>
+					<p>
+						<b>Mes principales contributions comprenaient:</b>
+					</p>
 					<ul style={{listStyleType: "circle"}}>
 						<li>Développement de nouvelles fonctionnalités pour enrichir l'expérience utilisateur.</li>
 						<li>Intégration de données en utilisant des APIs REST pour récupérer et afficher des informations en temps réel depuis le back-end.</li>
@@ -46,7 +63,7 @@ const MMADescription = () => {
 				onClick={() => setIsExpanded(!isExpanded)}
 			>
 				{isExpanded ? 'Lire moins' : 'Lire plus ...'}
-		</p>
+		</p><br />
 		{isExpanded && (
 			<div>
 				<p><b>Mes principales contributions comprenaient:</b></p>
@@ -72,16 +89,15 @@ const PrimonialDescription = () => {
 	return (<div>
 		<p>Conception du socle technique d'une application bancaire destinée à la gestion de patrimoine</p><br />
 		<p>L'équipe chez SEAROCCO était composée de 2 développeurs front-end y compris moi-même et 2 développeurs back-end, 
-		en plus du product owner chez le client.</p>
+		en plus du product owner chez le client.</p><br />
 		<p  style={{color: "#0081AB", cursor: "pointer", textAlign: "end", fontWeight: "bold", marginBottom: "10px", marginTop: "10px" }}
 				onClick={() => setIsExpanded(!isExpanded)}
 			>
 				{isExpanded ? 'Lire moins' : 'Lire plus ...'}
-		</p>
+		</p><br />
 		{isExpanded && (
 			<div>
 				<p>Cette application permet une gestion efficace des comptes et des établissements financiers.</p><br />
-				<p>Lire plus</p>
 				<p><b>Mes principales contributions:</b></p>
 					<p>J'ai intégré l'interface utilisateur en utilisant Ionic et développé des représentations graphiques avec Chart.js, 
 					offrant une analyse détaillée du patrimoine financier.<br /> 
@@ -103,7 +119,7 @@ const TwoCheckDescription = () =>{
 				onClick={() => setIsExpanded(!isExpanded)}
 			>
 				{isExpanded ? 'Lire moins' : 'Lire plus ...'}
-		</p>
+		</p><br />
 		{isExpanded && (
 			<div>
 				<p>Ce logiciel couvrait l'ensemble du processus de gestion de projet, depuis la création du devis jusqu'à la signature finale</p><br />
@@ -127,8 +143,9 @@ const ScannAppDescription = () => {
 
 	return (
 		<div>
-			<p>Conception from scratch d'une application mobile dédiée à la digitalisation de la logistique par le biais du scan.</p><br />
-			
+			<p>
+				Conception from scratch d'une application mobile dédiée à la digitalisation de la logistique par le biais du scan.
+			</p><br />
 			<p>
 				J'ai pris en charge la création et l'intégration complète du design, front-end et du back-end. 
 			</p><br />
@@ -136,18 +153,19 @@ const ScannAppDescription = () => {
 				onClick={() => setIsExpanded(!isExpanded)}
 			>
 				{isExpanded ? 'Lire moins' : 'Lire plus ...'}
-			</p>
+			</p><br />
 			{isExpanded && (
 				<div>
-					<p><br />
-					<b>L'application permet:</b>
+					<p>
+						<b>L'application permet:</b>
+					</p><br />
 					<ul style={{listStyleType: "circle", paddingLeft: "15px"}}>
 						<li>Un scannage unitaire ou en série</li> 
 						<li>Générer automatiquement un fichier CSV listant tous les éléments scannés avec leurs dates respectives</li> 
 						<li>Récupérer la zone géographique via Google Maps API pour indiquer le centre de scan</li>
 						<li>La possibilité d'envoyer un récapitulatif par e-mail</li>
 					</ul>
-					</p><br />
+					<br />
 				</div>
 			)}
 		</div>
@@ -158,7 +176,9 @@ const CloudpackDescription = () => {
 	const [isExpanded, setIsExpanded] = useState(false);
 
 	return (<div>
-		<p><b>SAAS |</b></p> 
+		<p>
+			<b>SAAS |</b>
+		</p> 
 		<p>Conception intégrale d'un logiciel de suivi de projet et de gestion des employés pour répondre à un besoin interne de l'entreprise.</p><br />
 		<p>
 			Ce projet a été mené en parallèle de mes missions principales, réalisé de manière autonome suite à un besoin ressenti au sein de l'entreprise.
@@ -167,23 +187,25 @@ const CloudpackDescription = () => {
 				onClick={() => setIsExpanded(!isExpanded)}
 			>
 				{isExpanded ? 'Lire moins' : 'Lire plus ...'}
-			</p>
+		</p><br />
 			{isExpanded && (
 				<div>
-					<p><br />
-					<b>J'ai mis en œuvre des fonctionnalités telles que:</b> <br/>
-						<ul style={{listStyleType: "circle", paddingLeft: "15px"}}>
-							<li>Le portail de connexion sécurisé.</li>
-							<li>Fonctionnalité pour enregistrer le temps consacré à chaque projet.</li>
-							<li>Filtrage des projets avec une option "favoris".</li>
-							<li>Possibilité de personnaliser son profil employé.</li>
-							<li>Interface pour demander des jours de congés.</li>
-							<li>Représentation graphique permettant de visualiser les jours travaillés, le nombre total de projets, ainsi que les congés imputés</li>
-							<li>Mis en place des tests unitaires</li>
-							<li>Développement des APIs</li>
-							<br />
-						</ul>
-					</p><br />
+					<br />
+						<p>
+							<b>J'ai mis en œuvre des fonctionnalités telles que:</b> <br/>
+								<ul style={{listStyleType: "circle", paddingLeft: "15px"}}>
+									<li>Le portail de connexion sécurisé.</li>
+									<li>Fonctionnalité pour enregistrer le temps consacré à chaque projet.</li>
+									<li>Filtrage des projets avec une option "favoris".</li>
+									<li>Possibilité de personnaliser son profil employé.</li>
+									<li>Interface pour demander des jours de congés.</li>
+									<li>Représentation graphique permettant de visualiser les jours travaillés, le nombre total de projets, ainsi que les congés imputés</li>
+									<li>Mis en place des tests unitaires</li>
+									<li>Développement des APIs</li>
+								</ul>
+								<br />
+						</p>
+					<br />
 				</div>
 			)}
 	</div>
@@ -204,7 +226,7 @@ const OnssaDescription = () => {
 				onClick={() => setIsExpanded(!isExpanded)}
 			>
 				{isExpanded ? 'Lire moins' : 'Lire plus ...'}
-			</p>
+			</p><br />
 			{isExpanded && (
 				<div>
 					<p><br />
@@ -239,7 +261,7 @@ const Itrade999Description = () => {
 				onClick={() => setIsExpanded(!isExpanded)}
 			>
 				{isExpanded ? 'Lire moins' : 'Lire plus ...'}
-			</p>
+			</p><br />
 			{isExpanded && (
 				<div>
 					<p><br />
@@ -276,7 +298,7 @@ const ColisTrackDescription = () => {
 				onClick={() => setIsExpanded(!isExpanded)}
 			>
 				{isExpanded ? 'Lire moins' : 'Lire plus ...'}
-			</p>
+			</p><br />
 			{isExpanded && (
 				<div>
 					<p><br />
@@ -310,7 +332,7 @@ const PortfolioDescription = () => {
 				onClick={() => setIsExpanded(!isExpanded)}
 			>
 				{isExpanded ? 'Lire moins' : 'Lire plus ...'}
-			</p>
+			</p><br />
 			{isExpanded && (
 				<div>
 					<p>
@@ -335,7 +357,6 @@ const data = [
 		title: "TPBP",
 		tags: ["Front"],
 		technos: ["images/technos/vue.png", "images/technos/php.png", "images/technos/mysql.png", "images/technos/kanbane.png", "images/technos/git.png", "images/technos/github.png",  "images/technos/gitlab.png", "images/technos/cypress.png", "images/technos/storybook.png"],
-		date: "Janvier - Juillet 2022",
 		description: <TPBPDescription />
 	},
 	{
@@ -343,7 +364,6 @@ const data = [
 		title: "PRIMONIAL",
 		tags: ["Front"],
 		technos: ["images/technos/angular.png", "images/technos/php.png", "images/technos/mysql.png", "images/technos/kanbane.png", "images/technos/jira.png", "images/technos/git.png", "images/technos/github.png"],
-		date: "Janvier - Juillet 2022",
 		description: <PrimonialDescription />
 	},
 	{
@@ -351,7 +371,6 @@ const data = [
 		title: "TWOCHECK",
 		tags: ["Front", "Back"],
 		technos: ["images/technos/vue.png", "images/technos/php.png", "images/technos/kanbane.png", "images/technos/mysql.png", "images/technos/jira.png", "images/technos/git.png", "images/technos/github.png"],
-		date: "Janvier - Juillet 2022",
 		description: <TwoCheckDescription />
 	},
 	{
@@ -359,7 +378,6 @@ const data = [
 		title: "SCANN'APP",
 		tags: ["Front", "Back"],
 		technos: ["images/technos/flutter.png", "images/technos/firebase.png", "images/technos/google_maps.png", "images/technos/kanbane.png", "images/technos/sqlite.png", "images/technos/git.png", "images/technos/github.png"],
-		date: "Janvier - Juillet 2022",
 		description: <ScannAppDescription />
 	},
 	// {
@@ -379,7 +397,6 @@ const data = [
 		title: "MMA",
 		tags: ["Front", "Back"],
 		technos: ["images/technos/react.png", "images/technos/node.png", "images/technos/firebase.png", "images/technos/kanbane.png", "images/technos/google_maps.png", "images/technos/git.png", "images/technos/github.png", "images/technos/flutter.png", "images/technos/sqlite.png" ],
-		date: "Janvier - Juillet 2022",
 		description: <MMADescription />,
 	},
 	{
@@ -387,7 +404,6 @@ const data = [
 		title: "CLOUDPACK",
 		tags: ["Front", "Back"],
 		technos: ["images/technos/react.png", "images/technos/node.png", "images/technos/jest.png", "images/technos/kanbane.png", "images/technos/mysql.png", "images/technos/typescript.png", "images/technos/git.png", "images/technos/github.png"],
-		date: "Janvier - Juillet 2022",
 		description: <CloudpackDescription />,
 	},
 	{
@@ -395,7 +411,6 @@ const data = [
 		title: "ONSSA",
 		tags: ["Front", "Back"],
 		technos: ["images/technos/flutter.png", "images/technos/firebase.png", "images/technos/sqlite.png",  "images/technos/kanbane.png", "images/technos/google_maps.png", "images/technos/git.png", "images/technos/github.png"],
-		date: "Janvier - Juillet 2022",
 		description: <OnssaDescription />,
 	},
 	{
@@ -403,7 +418,6 @@ const data = [
 		title: "ITRADE999",
 		tags: ["Front", "Back"],
 		technos: ["images/technos/react.png", "images/technos/node.png", "images/technos/material-ui.png", "images/technos/jest.png",  "images/technos/kanbane.png", "images/technos/mysql.png", "images/technos/git.png", "images/technos/github.png"],
-		date: "Janvier - Juillet 2022",
 		description: <Itrade999Description />
 	},
 	{
@@ -411,7 +425,6 @@ const data = [
 		title: "PORTFOLIO",
 		tags: ["Front"],
 		technos: ["images/technos/react.png", "images/technos/next.png", "images/technos/tailwind.png", "images/technos/typescript.png", "images/technos/git.png", "images/technos/github.png"],
-		date: "Janvier - Juillet 2022",
 		description: <PortfolioDescription />
 	},
 	{
@@ -419,7 +432,6 @@ const data = [
 		title: "COLIS-TRACK",
 		tags: ["Front", "Back"],
 		technos: ["images/technos/javascript.png", "images/technos/jquery.png", "images/technos/bootstrap.png", "images/technos/mysql.png", "images/technos/google_maps.png", "images/technos/git.png", "images/technos/github.png"],
-		date: "Janvier - Juillet 2022",
 		description: <ColisTrackDescription />
 	},
 	{
@@ -427,7 +439,6 @@ const data = [
 		title: "Next Projet",
 		tags: [""],
 		technos: [""],
-		date: "En cours",
 		description: ""
 	},
   ];
@@ -460,9 +471,9 @@ export default function ProjectsPage() {
 				<div>
 				  <article className="relative w-full h-full p-4 md:p-8">
 					<div className="flex items-center justify-between gap-2">
-					  <div className="text-xs text-zinc-100">
+					  {/* <div className="text-xs text-zinc-100">
 						{featured.date}
-					  </div>
+					  </div> */}
 					  <span className="flex items-center gap-1 text-xs text-zinc-500">
 						Participation 
 						{featured.tags.map((tag, index) => {
@@ -481,7 +492,7 @@ export default function ProjectsPage() {
 							height="35" 
 						/>
 					</h2>
-					<p className="mt-4 mb-8 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">{featured.description}</p>
+					<div className="mt-4 mb-8 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">{featured.description}</div>
 					
 					<div className="mt-2 mb-2 display flex flex-wrap wrap">
 						{featured.technos.map((techno, index) => {
@@ -502,7 +513,7 @@ export default function ProjectsPage() {
 			  <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
 				{[top2].map((project) => (
 				  <Card key={project.slug}>
-					<Article project={project} tags={project.tags} />
+					<Article project={project} tags={project.tags} technos={project.technos} />
 				  </Card>
 				))}
 			  </div>
@@ -514,21 +525,21 @@ export default function ProjectsPage() {
 			  <div className="grid grid-cols-1 gap-4">
 				{sorted.filter((_, i) => i % 3 === 0).map((project) => (
 				  <Card key={project.slug}>
-					<Article project={project} tags={project.tags}   />
+					<Article project={project} tags={project.tags} technos={project.technos} />
 				  </Card>
 				))}
 			  </div>
 			  <div className="grid grid-cols-1 gap-4">
 				{sorted.filter((_, i) => i % 3 === 1).map((project) => (
 				  <Card key={project.slug}>
-					<Article project={project} tags={project.tags}  />
+					<Article project={project} tags={project.tags} technos={project.technos} />
 				  </Card>
 				))}
 			  </div>
 			  <div className="grid grid-cols-1 gap-4">
 				{sorted.filter((_, i) => i % 3 === 2).map((project) => (
 				  <Card key={project.slug}>
-					<Article project={project} tags={project.tags}  />
+					<Article project={project} tags={project.tags} technos={project.technos} />
 				  </Card>
 				))}
 			  </div>
