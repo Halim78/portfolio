@@ -32,8 +32,8 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, certifications }) => {
         .drawer {
           position: fixed;
           top: 0;
-          right: -30%;
-          width: 30%;
+          right: -33%;
+          width: 33%;
           height: 100%;
           transition: right 0.3s;
           z-index: 10;
